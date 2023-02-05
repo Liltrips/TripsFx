@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TripsFX.com</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/trips.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sign up.html">sign up</a></li>
+                <li><a href="sign in.html">sign in</a></li>
+            </ul>
+            <img src="images/moon.png" id="icon">
+        </nav>
+        <div class="info">
+            <h1>Welcome to <span>Trips FX</span></h1>
+            <p>We offer the best knowledge in forex with quality audio language <br>and PDF's with weekly Zoom meeting to upgrade your knowledge. 
+            <br>We also give out the best signals in the forex market with an  <br>outstanding winrate of 95%.
+        </p>
+        <a href="">Terms and Conditions</a>
+        </div>
+        <div class="img-box">
+            <img src="images/background.png" class="back-img">
+            <img src="images/fx.png" class="main-img">
+        </div>
+        <div class="social-links">
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-behance"></i></a>
+             
+        </div>
+    </div>
+<script>
+      var icon = document.getElementById("icon");
+
+      if(localStorage.getItem("theme") == null){
+        localStorage.setItem("theme", "light");
+      }
+
+    let localData = localStorage.getItem("theme");
+
+    if(localData == "light"){
+        icon.src = "images/moon.png";
+        document.body.classList.remove("dark-theme");
+    }
+    else if(localData == "dark"){
+        icon.src = "images/sun.png";
+        document.body.classList.add("dark-theme");
+    }
+
+      icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+            localStorage.setItem("theme", "dark");
+        }else{
+            icon.src = "images/moon.png";
+            localStorage.setItem("theme", "light");
+        }
+      }
+
+</script>
+
+
+
+</body>
+</html>

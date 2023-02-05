@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title> 
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><h1><b>Home</b></h1></a></li>
+        </ul>
+    </nav>
+    <div class="full-img" id="fullImgBox">
+        <img src="gallery/img1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+        <img src="gallery/img1.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img2.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img3.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img4.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img5.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img6.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img7.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img8.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+        <img src="gallery/img9.jpg" width="300px" height="350px" onclick="openFullImg(this.src)">
+    </div>
+
+
+   <script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+      fullImgBox.style.display ="flex";
+      fullImg.src = pic;
+    }
+    function closeFullImg(){
+        fullImgBox.style.display ="none";
+    }
+
+   </script>
+</body>
+</html>
